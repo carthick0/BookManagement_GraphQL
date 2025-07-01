@@ -2,6 +2,10 @@ import { bookController } from "../controllers/book_controller";
 export const bookResolvers = {
   Query: {
     books: () => bookController.getAllBooks(),
+    book:(parent:any,args:any)=>{
+      const bookId=parseInt(args.id)
+      return bookController.getBook(bookId)
+    }
   },
   Mutation: {
   addBook: (parent: any,args: { title: string; year: number; authorId: string }) => {

@@ -1,4 +1,4 @@
-import prisma from "../config/prisma_config";
+import prisma from "../../config/prisma_config";
 
 import { CrudRepository } from "./curd_repository";
 

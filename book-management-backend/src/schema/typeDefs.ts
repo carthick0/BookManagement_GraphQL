@@ -17,6 +17,7 @@ export const typeDefs=`#graphql
         books:[Book!]!
         authors:[Author!]!
         author(id: ID!): Author!
+        book(id:ID!):Book!
     }
 
     type Mutation{
